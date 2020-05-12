@@ -1,0 +1,82 @@
+// wp paypal shopping cart css classes
+
+.wp_cart_product_display_box{
+    margin-bottom:20px;
+    width:100%;
+    border:none;
+    overflow:auto;
+}
+
+.wp_cart_product_thumbnail{
+    position:relative;
+    padding-bottom: 20px;
+    width:100%;
+    text-align:center;
+    img{
+        height:inherit !important;
+        width:300px !important;
+        object-fit:scale-down !important;
+        border: 1px solid black;
+    }
+}
+.wp_cart_product_display_bottom{
+    width:100%;
+    text-align:center;
+    padding-left:20px;
+    font-family:$serif1;
+}
+.wp_cart_product_name{
+    font-size:1.2em;
+    font-family:$sansserif2;
+}
+.wp_cart_item_info{
+    text-align:left;
+}
+.wp_cart_button{
+    opacity:1;
+    height:25px;
+    margin-top:10px !important;
+}
+
+.shopping_cart{
+    width:100%;
+    padding:20px;
+    img{
+        display:none;
+    }
+    a{
+        color:black;
+        font-family:$sansserif2;
+        font-size:.9em;
+        display:inline-block;
+    }
+    form{
+        text-align:center;
+        .wp_cart_checkout_button{
+            height:50px !important;
+            margin:10px 0 5px;
+        }
+    }
+    .paypal-button{
+        width:40%!important;
+        margin: 0 auto;
+    }
+}
+.wp_cart_empty_cart_section{
+    padding-bottom:20px;
+}
+
+@media screen and(min-width:$tablet){
+    .wp_cart_product_thumbnail{
+        width:50%;
+        float:left;
+    }
+    .wp_cart_product_description{
+        text-align: justify;
+    }
+    .wp_cart_product_display_bottom{
+        width:50%;
+        float:left;
+        text-align:left;
+    }
+}

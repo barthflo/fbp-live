@@ -1,0 +1,59 @@
+.custom-logo{
+    width:150px;
+    height:150px;
+}
+
+#sidebar{
+    text-align:center;
+    height:100vh;
+    overflow-y:scroll;
+    .header{
+        position:fixed;
+        width:100%;
+        right:0;
+        top:0;
+        background:$white;
+        z-index:10;
+        h2{
+            font-size:1.5em;
+        }
+    }
+    .sidebar-content{
+        overflow:scroll;
+        margin-bottom:50px;
+    }
+    #navThumbnails-stories{
+        width:100%;
+        .thumbs{
+            height:150px;
+            width:100%;
+            opacity:1;
+            object-fit: contain;
+        }
+    }
+    .thumbs{
+        height:75px;
+        width:75px;
+        object-fit:cover;
+        margin-bottom:4px;
+        transition:ease-in-out.2s;
+        -webkit-transition: ease-in-out.2s;
+        -moz-transition: ease-in-out.2s;
+    }
+    .thumbs.active{
+        opacity:.8;
+        padding:5px;
+    }
+    .about-img{
+        height:250px;
+        width:50%;
+        object-fit:cover;
+    }
+    .footer{
+        background:$white;
+        position:fixed;
+        right:0;
+        bottom:0;
+        width:100%;
+    }
+}

@@ -1,0 +1,248 @@
+//Typography
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Nunito|Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Pompiere|Fredericka+the+Great&display=swap');
+
+//font families variables
+$sansserif1 : 'Montserrat', sans-serif;
+$sansserif2 : 'Nunito', sans-serif;
+$sansserif3 : 'Roboto', sans-serif;
+$serif1: 'Raleway', serif;
+$cursive0 : 'Parisienne', cursive;
+$sansserif4 : 'Shadows Into Light', sans-serif;
+$cursive1 : 'Pacifico', cursive;
+$cursive2 : 'Pompiere', cursive;
+$cursive3 : 'Fredericka the Great', cursive;
+
+$menu:$serif1;
+
+$primarycolor : #c73700d6;
+$secondarycolor: #487162;
+$white:white;
+$third-color:#e34524;
+
+//menus
+//head menu
+#menu-primary{
+    font-family:$menu;
+    a{
+        font-size:.9em;
+        color:$secondarycolor;
+        transition: ease-in-out .4s;
+        -webkit-transition: ease-in-out.4s;
+        -moz-transition: ease-in-out .4s;
+    }
+    a:hover{
+        font-size:1.1em;
+        color:$primarycolor;
+        transition:ease-in-out .4s;
+        -webkit-transition: ease-in-out.4s;
+        -moz-transition: ease-in-out.4s;
+
+    }
+    .current-menu-item, .current-page-ancestor{
+        a{
+            color:$primarycolor;
+            font-weight:400;
+            font-size:1em;
+            transition:ease-in-out.4s;
+            -webkit-transition: ease-in-out.4s;
+            -moz-transition: ease-in-out.4s;
+        }
+        a:hover{
+            font-size:1.1em;
+            transition:ease-in-out.4s;
+            -webkit-transition: ease-in-out.4s;
+            -moz-transition: ease-in-out.4s;
+        }
+    }
+    li{
+        padding: 0 3px;
+    }
+}
+//footer menu
+.footer, .footer-thanks{
+    border-top:1px dotted $primarycolor;
+    margin:20px 0;
+    li{
+        padding:0 5px;
+        margin-bottom:3px;
+    }
+    p{
+        font-family:$menu;
+        font-size:.6em;
+        font-style:italic;
+        margin-bottom:5px;
+    }
+}
+// titles
+h2{
+    font-family:$sansserif1;
+    color:$primarycolor;
+}
+h3{
+    font-family:$cursive2;
+    
+    text-transform: uppercase;
+    font-weight:400;
+    font-style: italic;
+}
+h4{
+    font-family:$serif1;
+    font-style:italic;
+    opacity:.8;
+    font-size:1em;
+    display:inline;
+}
+//text
+p{
+    font-family:$serif1;
+}
+.about p{
+    font-family:$serif1;
+    opacity:.8;
+    padding: 0 15%;
+    font-size:1em;
+    font-weight: lighter;
+    font-style: italic;
+    text-align:center !important;
+}
+.about a {
+    color:$primarycolor;
+}
+.about-gear{
+    text-align:center !important;
+}
+
+.stories-caption{
+    font-family:$serif1;
+    text-transform: capitalize;
+    font-size:.8em;
+}
+//icons
+.fa-chevron-up{
+    padding:7px;
+    transition:ease-in-out .5s;
+    -webkit-transition: ease-in-out .5s;
+    -moz-transition: ease-in-out .5s;
+    &:hover{
+        color:$white;
+        transition:ease-in-out .5s;
+        -webkit-transition: ease-in-out .5s;
+        -moz-transition: ease-in-out .5s;
+    }
+}
+.fas{
+    color:$third-color;
+    opacity:.8;
+    font-size:1em;
+    cursor:pointer;
+    z-index:50;
+}
+.fas:hover{
+    color: $secondarycolor;
+    opacity:.8;
+    transition:.1s ease-in;
+    -webkit-transition: .1s ease-in;
+    -moz-transition: .1s ease-in;
+}
+.scroll-down{
+    background:rgba(0, 0, 0, 0.5);
+    opacity:.7;
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    margin-left: -16px;
+    display: block;
+    width: 32px;
+    height: 32px;
+    border: 2px solid $white;
+    background-size: 14px auto;
+    border-radius: 50%;
+    z-index: 2;
+    -webkit-animation: bounce 2s infinite 2s;
+    animation: bounce 2s infinite 2s;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+    -webkit-transition: all .5s ease-in 3s;
+    transition: all .5s ease-in 3s;
+    &:before{
+        position: absolute;
+        top: calc(50% - 8px);
+        left: calc(50% - 6px);
+        transform: rotate(-45deg);
+        display: block;
+        width: 12px;
+        height: 12px;
+        content: "";
+        border: 1px solid $white;
+        border-width: 0px 0 2px 2px;
+    }
+}
+@keyframes bounce {
+    0%,
+    100%,
+    20%,
+    50%,
+    80% {
+      -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+      transform: translateY(0);
+    }
+    40% {
+      -webkit-transform: translateY(-10px);
+      -ms-transform: translateY(-10px);
+      transform: translateY(-10px);
+    }
+    60% {
+      -webkit-transform: translateY(-5px);
+      -ms-transform: translateY(-5px);
+      transform: translateY(-5px);
+    }
+  }
+// Hamburger
+.hamburger{
+    position:absolute;
+    right:0;
+    top:25px;
+    padding:10px;
+    z-index:100;
+    span{
+        transform:scale(0);
+    }
+    &:after, &:before, span{
+        background-color:$third-color;
+        border-radius:3px;
+        content:'';
+        display:block;
+        height:2px;
+        width:15px;
+        margin: 4px 5px;
+        position:relative;
+        top:5px;
+        opacity:.6;
+        transition:ease-in .5s;
+    }
+    &:hover:after, &:hover:before{
+        background-color:$secondarycolor;
+        opacity:.8;
+        transition:ease-in .5s;
+    }
+    &:before{
+        transform: rotate(135deg) translate(4px, 0px);
+    }
+    &:after{
+        transform: rotate(-135deg) translate(8px, 5px);
+    }
+}
+
+//about image
+.rounded{
+    border-radius:0% !important;
+    width:150px;
+    margin:0 20%;
+}

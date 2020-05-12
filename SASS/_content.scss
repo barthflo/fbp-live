@@ -1,0 +1,127 @@
+#content{
+    background:$white;
+    width:100%;
+    position:absolute;
+    top:0;
+    height:fit-content;
+    z-index:100;
+    margin-left:100%;
+    transition:all .5s;
+    -webkit-transition:all.5s;
+    -moz-transition: all .5s;
+}
+// show-content
+#content.show-mobile{
+    margin-left:0;
+    transition:all .5s;
+    -webkit-transition:all.5s;
+    -moz-transition: all .5s;
+}
+.content-thanks{
+    #return{
+        background:$secondarycolor;
+        display:inline-block;
+        width:fit-content;
+        padding:5px 10px;
+        color:white;
+        font-family:"nunito";
+        font-size:.6em;
+        margin-bottom:20px;
+      }
+    #return:hover{
+        opacity:.8;
+        background:$primarycolor;
+    }
+    h2{
+        font-size:1.7em;
+    }
+    figure img{
+        margin:20px 0 10px;
+    }
+}
+
+// wp-classes
+
+.title-stories{
+    position:absolute;
+    top:10%;
+    margin:0 auto;
+    font-size:2em;
+    color:white;
+    padding:15px;
+    text-transform: capitalize;
+    p{
+        font-family: $cursive3;
+    }
+    p:nth-child(2){
+        position:absolute;
+        bottom:100px;
+        left:130px;
+    }
+    .has-drop-cap{
+        font-size:.5em;
+    }
+  }
+.masonry-gallery{
+    column-count: 1;
+    column-gap:.5em;
+    margin-bottom:20px;
+}
+.item{
+    width:100% !important;
+    display:list-item;
+    list-style-type: none;
+    margin-bottom:-.5em;
+    img{
+        width:100% !important;
+        height: initial !important;
+    }
+}
+
+.wp-block-image{
+    margin:5px 0;
+    img{
+        height:100% !important;
+    }
+}
+.alignright{
+    width:100%;
+    margin-left:0;
+    margin-bottom:0;
+    margin-top:5px;
+}
+.alignleft{
+    width:100%;
+    margin-right:0;
+    margin-bottom:0;
+    margin-top:5px;
+}
+.wp-block-column{
+    margin: 0 !important;
+    padding: 0 2.5px;
+}
+.blocks-gallery-item{
+    margin:0 !important;
+    padding:2.5px 0 !important;
+}
+
+.wp-block-image figcaption{
+    font-family:$serif1;
+    font-size:12px;
+    text-align:center;
+    margin-bottom:5px;
+    margin-top:0;
+}
+@media (min-width:600px){
+    .wp-block-column{
+        flex-basis: 50%;
+    }
+     .alignright{
+        width:50%;
+        margin-left:1em;
+    }
+    .alignleft{
+        width:50%;
+        margin-right:1em;
+    }
+}

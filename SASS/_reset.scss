@@ -1,0 +1,31 @@
+.site-wrap{
+    position:absolute;
+    //top:47px;
+    height:100vh;
+    overflow:hidden;
+}
+.site-wrap-thanks{
+    text-align:center;
+}
+@media (min-width:783px){
+    //.site-wrap, .header{
+        //top:32px;
+    //}
+}
+ul, ol, li, a{
+    list-style-type:none;
+    text-decoration: none;
+    transition:ease-in .4s;
+}
+ul, ol, li{
+    display:inline-block;
+    padding: 0;
+    margin: 0;
+}
+a{
+    cursor:pointer;
+}
+a:hover, a:active{
+    text-decoration:none;
+    color:none;
+}

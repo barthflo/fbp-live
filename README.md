@@ -1,3 +1,3 @@
 # fbp-live
 
-back up flobarthphotography.com
+Custom wordpress template for photography portfolio

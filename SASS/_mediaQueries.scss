@@ -1,0 +1,229 @@
+
+$phones:426px;
+$tablet:768px;
+$laptop:992px;
+$desktop: 1440px;
+$HighRes: 1900px;
+
+@media (min-width:$phones){
+    #sidebar{
+        h2{
+            font-size:1.7em;
+        }
+        .site-nav{
+            font-size:1.1em;
+        }
+        .thumbs{
+            height:125px;
+            width:125px;
+        }
+    }
+    .stories{
+        padding-left:1em;
+    }
+    .masonry-gallery{
+        column-count:2;
+    }
+    //wp gallery
+    .wp-block-columns{
+        flex-wrap:nowrap;
+    }
+}
+@media (min-width:$tablet){
+    .title-stories{
+        font-size:3em;
+        p:nth-child(2){
+            bottom:170px;
+            left:230px;
+        }
+    }
+}
+@media (min-width:$laptop){
+
+.hide-desktop{
+    display:none;
+}
+    //hamburger
+.hamburger{  
+    position:fixed;
+    &.is-active:before, &.is-active:after, &.is-active span{
+        transform:scale(1);
+        width:30px;
+        background-color: $primarycolor;
+        opacity:.9;
+    }
+    &.is-active:hover:before, &.is-active:hover:after, &.is-active:hover span{
+        background-color: $secondarycolor;
+    }
+}
+
+    //Nav 
+    #sidebar{
+        width:30%;
+        position:absolute;
+        right:0;
+        transition:all .5s;
+        -webkit-transition: all .5s;
+        -moz-transition: .5s all;
+        .header{
+            width:30%;
+            transition:all .5s;
+            -webkit-transition: all .5s;
+            -moz-transition: .5s all;
+            h2{
+                font-size:1.5em;
+            }
+            .site-nav{
+                font-size:.9em;
+            }
+        }
+        .about p{
+            text-align:center !important;
+            font-size: .9em;
+        }
+        .thumbs{
+                height:75px;
+                width:75px;
+        }
+        #navThumbnails-stories{
+            .thumbs:hover{
+                opacity:.8;
+            }
+        }
+        .thumbs:hover{
+            cursor:pointer;
+            opacity:.8;
+            transition:ease-in-out.2s;
+            -webkit-transition: ease-in-out.2s;
+            -moz-transition: ease-in-out.2s;
+        }
+        .thumbs.active{
+            opacity:.8;
+            padding:5px;
+        }
+        .hide-desktop{
+            display:none;
+        }
+        .footer{
+            width:30%;
+        }
+    }
+
+    #sidebar.active,.header.active{
+        margin-right:-30%;
+        transition:all .5s;
+        -webkit-transition: all .5s;
+        -moz-transition: .5s all;
+    }
+
+    //Content
+    #content{
+        width:70%;
+        margin:0;
+        .slider{
+            width:100%;
+        }
+        .slider-about{
+            overflow:hidden;
+        }
+    }  
+    #content.active{
+        width:100%;
+        display:block;
+        transition:all .5s;
+        -webkit-transition: all .5s;
+        -moz-transition: .5s all;
+    }
+
+    #backTop{
+        position:fixed;
+        margin-right:30%;
+        transition:all .5s;
+        -webkit-transition: all .5s;
+        -moz-transition: .5s all;
+    }
+    #backTop.active{
+        position:fixed;
+        margin-right:0;
+        right:15px;
+        transition:all .5s;
+        -webkit-transition: all .5s;
+        -moz-transition: .5s all;
+    }
+    .slider .nextbtn, .slider .backbtn{
+        visibility:visible;
+        margin-right:30%;
+        transition: all .5s;
+        -webkit-transition: all .5s;
+        -moz-transition: .5s all;
+    }
+    .slider .nextbtn.active{
+        margin-right:0;
+        transition: all .5s;
+        -webkit-transition: all .5s;
+        -moz-transition: .5s all;
+    }
+    // wp classes
+    .blocks-gallery-item{
+        padding: 1% 0%;
+    }
+    .alignright, .alignleft{
+        width:300px;
+    }
+    
+}
+
+@media (min-width:$desktop){
+    #sidebar{
+        h2{
+            font-size:2em;
+        }
+        .site-nav{
+            font-size:1.3em;
+        }
+        #navThumbnails .thumbs{
+            height:100px;
+            width:100px;
+        }
+        .footer-menu{
+            margin-top:5px;
+            img{
+                height:12px;
+            }
+        }
+        .footer{
+            p{
+                font-size:.8em;
+                padding-bottom: 10px;
+            }
+        }
+    }
+}
+
+
+@media (min-width:$HighRes){
+    .custom-logo{
+        width:250px;
+        height:250px;
+    }
+    #sidebar{
+        h2{
+            font-size:2.5em;
+        }
+        .site-nav{
+            font-size:1.5em;
+        }
+        #navThumbnails{
+            margin-top:15px;
+            .thumbs{
+                width:120px;
+                height:120px;
+            }
+        }
+    }
+    #content{
+        h3{
+            font-size:2.4em;
+        }
+    }
+}
